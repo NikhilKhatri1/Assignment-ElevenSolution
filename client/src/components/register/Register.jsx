@@ -26,7 +26,7 @@ const RegisterForm = () => {
   if (loading) return <h1>Loading...</h1>;
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gray-100">
+    <div className="w-full h-screen flex items-center justify-center bg-gray-100 mt-[-20px] px-2">
       <div className="bg-white p-8 shadow-lg rounded-lg w-[400px]">
         <h2 className="text-2xl font-bold text-center text-sky-600 mb-6">Register</h2>
         <CommonForm

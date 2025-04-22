@@ -65,7 +65,7 @@ const AdminPanel = () => {
     };
 
     return (
-        <div className="p-8 bg-gray-100 min-h-screen">
+        <div className="p-4 bg-gray-100 min-h-screen w-full">
             <h2 className="text-2xl font-bold mb-6 text-center">Admin Panel</h2>
 
             {/* Course Type Management */}
@@ -88,11 +88,11 @@ const AdminPanel = () => {
                         {courseTypeForm.id ? 'Update' : 'Create'}
                     </button>
                 </form>
-                <table className="w-full border-collapse">
+                <table className="w-full border-collapse text-xs md:text-md font-semibold sm:font-bold">
                     <thead>
                         <tr className="bg-gray-200">
-                            <th className="p-2 border">Name</th>
-                            <th className="p-2 border">Actions</th>
+                            <th className="p-2 border text-sm font-bold sm:text-md">Name</th>
+                            <th className="p-2 border text-sm font-bold sm:text-md">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -139,11 +139,11 @@ const AdminPanel = () => {
                         {courseForm.id ? 'Update' : 'Create'}
                     </button>
                 </form>
-                <table className="w-full border-collapse">
+                <table className="w-full border-collapse text-xs md:text-md font-semibold sm:font-bold">
                     <thead>
                         <tr className="bg-gray-200">
-                            <th className="p-2 border">Name</th>
-                            <th className="p-2 border">Actions</th>
+                            <th className="p-2 border font-bold text-sm">Name</th>
+                            <th className="p-2 border font-bold text-sm">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -153,7 +153,7 @@ const AdminPanel = () => {
                                 <td className="p-2 border">
                                     <button
                                         onClick={() => editCourse(c)}
-                                        className="bg-yellow-500 p-1 px-2 rounded-md text-white mr-2"
+                                        className="bg-yellow-500 p-1 px-2 rounded-md text-white mr-2 "
                                     >
                                         Edit
                                     </button>
@@ -173,7 +173,7 @@ const AdminPanel = () => {
             {/* Course Offering Management */}
             <div>
                 <h3 className="text-xl font-semibold mb-4">Manage Course Offerings</h3>
-                <form onSubmit={handleCourseOfferingSubmit} className="flex gap-4 mb-4">
+                <form onSubmit={handleCourseOfferingSubmit} className="flex gap-1 mb-4">
                     <select
                         value={courseOfferingForm.courseId}
                         onChange={(e) =>
@@ -182,7 +182,7 @@ const AdminPanel = () => {
                                 courseId: e.target.value,
                             })
                         }
-                        className="border border-gray-600 p-1 rounded-md px-2"
+                        className="border border-gray-600 py-1 rounded-md w-1/2 md:w-full"
                     >
                         <option value="">Select Course</option>
                         {courses.map((c) => (
@@ -199,7 +199,7 @@ const AdminPanel = () => {
                                 courseTypeId: e.target.value,
                             })
                         }
-                        className="border border-gray-600 p-1 rounded-md px-2"
+                        className="border border-gray-600 py-1 rounded-md w-1/2 md:w-full"
                     >
                         <option value="">Select Course Type</option>
                         {courseTypes.map((ct) => (
@@ -215,12 +215,12 @@ const AdminPanel = () => {
                         Create
                     </button>
                 </form>
-                <table className="w-full border-collapse">
+                <table className="w-full border-collapse  text-xs md:text-md font-semibold sm:font-bold">
                     <thead>
                         <tr className="bg-gray-200">
-                            <th className="p-2 border">Course</th>
-                            <th className="p-2 border">Course Type</th>
-                            <th className="p-2 border">Actions</th>
+                            <th className="p-2 border text-sm font-bold sm:text-md">Course</th>
+                            <th className="p-2 border text-sm font-bold sm:text-md">Course Type</th>
+                            <th className="p-2 border text-sm font-bold sm:text-md">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

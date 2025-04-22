@@ -28,7 +28,7 @@ const AdminLogin = () => {
     if (loading) return <h1>Loading....</h1>;
 
     return (
-        <div className="w-full h-screen flex items-center justify-center bg-gray-100">
+        <div className="w-full h-screen flex items-center justify-center bg-gray-100 mt-[-70px] px-5">
             <div className="bg-white p-8 shadow-lg rounded-lg w-[400px]">
                 <h2 className="text-2xl font-bold text-center text-sky-600 mb-6">Admin Login</h2>
                 <CommonForm

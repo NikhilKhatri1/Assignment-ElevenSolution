@@ -26,8 +26,8 @@ const LoginForm = () => {
   if (loading) return <h1>Loading...</h1>;
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 shadow-lg rounded-lg w-[400px]">
+    <div className="w-full h-screen flex items-center justify-center bg-gray-100 px-2 mt-[-70px]">
+      <div className="bg-white p-8 shadow-lg rounded-lg md:w-[400px]">
         <h2 className="text-2xl font-bold text-center text-sky-600 mb-6">Login</h2>
         <CommonForm
           formControls={loginFormControls}

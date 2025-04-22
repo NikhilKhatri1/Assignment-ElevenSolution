@@ -40,13 +40,14 @@ const UserRegister = () => {
     : courseOfferings;
 
   return (
-    <div className="mt-10 bg-white shadow-md rounded px-8 py-4 w-3/4 flex flex-col">
+
+    <div className="sm:my-5 mt-5 bg-white shadow-md rounded-lg sm:px-8 sm:py-4 w-[95vw] flex flex-col px-3 py-4 sm:w-1/2 text-sm sm:text-lg">
       <div className="text-center mt-2 mb-8">
-        <h1>Hi, {user?.username}! Please fill your details to register</h1>
-        <p>Your User ID is {user?.id}</p>
+        <h1 className='font-bold'>Hi, {user?.username}! Please fill your details to register</h1>
+        <p className='font-semibold mt-2'>Your User ID is {user?.id}</p>
       </div>
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-        <div>
+      <form className="flex flex-col gap-4 justify-center items-start" onSubmit={handleSubmit}>
+        <div className='flex justify-between items-center gap-3 w-full'>
           <label>User ID: </label>
           <input
             type="text"
@@ -55,7 +56,7 @@ const UserRegister = () => {
             className="border border-gray-600 p-1 rounded-md px-2 bg-gray-200"
           />
         </div>
-        <div>
+        <div className='flex justify-between items-center gap-3 w-full'>
           <label>Username: </label>
           <input
             type="text"
@@ -64,7 +65,7 @@ const UserRegister = () => {
             className="border border-gray-600 p-1 rounded-md px-2 bg-gray-200"
           />
         </div>
-        <div>
+        <div className='flex justify-between items-center gap-3 w-full'>
           <label>Course Type: </label>
           <select
             name="courseTypeId"
@@ -80,7 +81,7 @@ const UserRegister = () => {
             ))}
           </select>
         </div>
-        <div>
+        <div className='flex justify-between items-center gap-3 w-full'>
           <label>Courses: </label>
           <select
             name="courseId"
@@ -96,13 +97,13 @@ const UserRegister = () => {
             ))}
           </select>
         </div>
-        <div>
+        <div className='flex justify-between items-center gap-3 w-full'>
           <label>Course Offering: </label>
           <select
             name="courseOfferingId"
             value={formData.courseOfferingId}
             onChange={handleChange}
-            className="border border-gray-600 p-1 rounded-md px-2"
+            className="border border-gray-600 p-1 rounded-md px-2 w-50"
           >
             <option value="">Select Course Offering</option>
             {filteredOfferings.map((co) => {
@@ -118,12 +119,13 @@ const UserRegister = () => {
         </div>
         <button
           type="submit"
-          className="bg-sky-500 p-2 px-4 rounded-xl font-bold text-slate-800 hover:bg-sky-700"
+          className="bg-sky-500 p-2 px-4 rounded-xl font-bold text-slate-800 hover:bg-sky-700 w-full my-5 sm:my-1"
         >
           Register
         </button>
       </form>
     </div>
+
   );
 };
 

@@ -18,12 +18,12 @@ const Header = () => {
   };
 
   return (
-    <div className="py-2 px-10 bg-slate-100 shadow-lg sticky top-0 z-10">
+    <div className="md:py-2 md:px-10 bg-slate-100 shadow-lg sticky top-0 z-10 py-1 px-5">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl text-sky-600">StudentLogin</h1>
         </div>
-        <div>
+        <div className='lg:block hidden'>
           <ul className="flex justify-between items-center gap-5">
             {user && user.role === 'admin' && (
               <li>
